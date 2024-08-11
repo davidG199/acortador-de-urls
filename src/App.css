@@ -15,3 +15,8 @@
   font-size: 1.125rem;
   font-family: "Poppins", sans-serif;
 }
+
+.boost{
+  background: url(../images/bg-boost-mobile.svg);
+  min-height: 300px;
+}
