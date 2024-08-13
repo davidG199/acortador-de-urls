@@ -20,3 +20,11 @@
   background: url(../images/bg-boost-mobile.svg);
   min-height: 300px;
 }
+
+@media (min-width: 768px) {
+  .boost{
+    background: url(../images/bg-boost-desktop.svg) no-repeat center;
+    min-height: 250px;
+  }
+
+}

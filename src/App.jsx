@@ -31,8 +31,8 @@ function App() {
         </section>
         <Boost />
       </main>
-      <footer className="bg-[var(--Very-Dark-Violet)] py-10">
-        <Footer/>
+      <footer className="bg-[var(--Very-Dark-Violet)] py-10 md:py-16 md:px-10">
+        <Footer />
       </footer>
     </>
   );
