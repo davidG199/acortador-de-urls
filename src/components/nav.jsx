@@ -11,24 +11,22 @@ function Nav() {
 
   return (
     <>
-      <nav className="">
-        <div className="flex w-full justify-between items-center text-[var(--Gray)] font-bold">
-          <div className="flex sm:gap-10 justify-between sm:justify-normal">
-            <img src={logo} alt="logo" />
-            <img
-              src={iconMenu}
-              alt="iconMenu"
-              width={"32px"}
-              onClick={handleClick}
-              className=" sm:hidden"
-            />
-            <ul className="hidden sm:flex flex-row gap-5 ">
-              <li className="text-base">Features</li>
-              <li className="text-base">Pricing</li>
-              <li className="text-base">Resources</li>
-            </ul>
-          </div>
-          <ul className="hidden sm:flex flex-row items-center gap-10 ">
+      <nav className="w-full">
+        <div className="flex items-center justify-between text-[var(--Gray)] font-bold">
+          <img src={logo} alt="logo" />
+          <img
+            src={iconMenu}
+            alt="iconMenu"
+            width={"32px"}
+            onClick={handleClick}
+            className=" sm:hidden"
+          />
+          <ul className="hidden sm:flex flex-row gap-5 ">
+            <li className="text-base">Features</li>
+            <li className="text-base">Pricing</li>
+            <li className="text-base">Resources</li>
+          </ul>
+          <ul className="hidden sm:flex flex-row items-center gap-8 ">
             <li className="text-base">Login</li>
             <li className="text-base bg-[var(--Cyan)] px-5 py-1 rounded-full text-white">
               sign up
