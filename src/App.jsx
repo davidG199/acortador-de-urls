@@ -31,7 +31,8 @@ function App() {
         <section className="my-8 mx-5  bg-white">
           <Nav />
           <Hero />
-          <InputLink onNewLink={addNewLink} />{" "}  {/* mandamos el link a la funcion para actualizar los enlaces del localStorage */}
+          <InputLink onNewLink={addNewLink} />
+            {/* mandamos el link a la funcion para actualizar los enlaces del localStorage */}
           <Link links={links} />
         </section>
         <section className="bg-gray-200 pb-16">

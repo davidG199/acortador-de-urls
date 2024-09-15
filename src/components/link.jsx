@@ -1,18 +1,21 @@
-import React from "react";
+import { useState } from "react";
+
 function Link({ links }) {
+  const [copiedLink, setCopiedLink] = useState(null);
+
   //Funcion para copiar el link acortado
-  const handleCopy = (shortenedUrl) => {
+  const handleCopy = (shortenedUrl, index) => {
     navigator.clipboard
       .writeText(shortenedUrl)
       .then(() => {
-        alert("Link copaido al portapapeles");
+        setCopiedLink(index);
       })
       .catch((err) => {
         console.error("Error al copiar el link", err);
       });
   };
   return (
-    <div className="mt-6">
+    <div className="mt-4 flex flex-col gap-4">
       {/* la variable links evalua el localStorage para saber cuantos debe de renderizar */}
       {links.length === 0
         ? ""
@@ -20,9 +23,9 @@ function Link({ links }) {
             <div
               key={index}
               className="
-              mt-4 py-4 
-              bg-gray-100
-              rounded-lg shadow-lg 
+              mt-4 py-4
+              bg-slate-50/10
+              rounded-lg shadow-2xl 
               flex flex-col"
             >
               <span className="border-b border-[var(--Gray)]">
@@ -40,14 +43,18 @@ function Link({ links }) {
                 </a>
               </span>
               <button
-                className="
-                bg-[var(--Cyan)] 
+                className={`
                 px-4 py-2 mt-4 mx-4 
                 rounded-md 
-                text-white font-bold text-[18px]"
-                onClick={() => handleCopy(link.shortenedUrl)}
+                text-white font-bold text-[18px]
+                ${
+                  copiedLink === index
+                    ? "bg-[var(--Dark-Violet)]"
+                    : "bg-[var(--Cyan)]"
+                }`}
+                onClick={() => handleCopy(link.shortenedUrl, index)}
               >
-                Copy
+                {copiedLink === index ? "Copied!" : "copy"}
               </button>
             </div>
           ))}

@@ -19,7 +19,7 @@ function Info() {
           Bran Recognition
         </p>
         <p className="text-sm text-[var(--Grayish-Violet)] text-center my-2 leading-6">
-          Boost your brand recognition with each. Generic links don't mean a
+          Boost your brand recognition with each. Generic links don`t mean a
           thing. Branded links help instil confidence in your content.
         </p>
       </article>
