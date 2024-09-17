@@ -11,27 +11,29 @@ function Nav() {
 
   return (
     <>
-      <nav className="w-full">
-        <div className="flex items-center justify-between text-[var(--Gray)] font-bold">
+      <nav className="w-full pt-8 md:pt-10 px-5 md:px-16 lg:px-28">
+        <div className="flex items-center justify-between md:gap-10 text-[var(--Gray)] font-bold">
           <img src={logo} alt="logo" />
           <img
             src={iconMenu}
             alt="iconMenu"
             width={"32px"}
             onClick={handleClick}
-            className=" sm:hidden"
+            className=" md:hidden cursor-pointer"
           />
-          <ul className="hidden sm:flex flex-row gap-5 ">
-            <li className="text-base">Features</li>
-            <li className="text-base">Pricing</li>
-            <li className="text-base">Resources</li>
-          </ul>
-          <ul className="hidden sm:flex flex-row items-center gap-8 ">
-            <li className="text-base">Login</li>
-            <li className="text-base bg-[var(--Cyan)] px-5 py-1 rounded-full text-white">
-              sign up
-            </li>
-          </ul>
+          <div className="hidden w-full md:flex items-center justify-between">
+            <ul className="hidden md:flex flex-row gap-5 ">
+              <li className="text-base hover:text-[var(--Very-Dark-Violet)] cursor-pointer">Features</li>
+              <li className="text-base hover:text-[var(--Very-Dark-Violet)] cursor-pointer">Pricing</li>
+              <li className="text-base hover:text-[var(--Very-Dark-Violet)] cursor-pointer">Resources</li>
+            </ul>
+            <ul className="hidden md:flex flex-row items-center gap-8 ">
+              <li className="text-base hover:text-[var(--Very-Dark-Violet)] cursor-pointer">Login</li>
+              <li className="text-base bg-[var(--Cyan)] px-5 py-2 rounded-full text-white cursor-pointer hover:bg-[var(--Cyan-hover)]">
+                sign up
+              </li>
+            </ul>
+          </div>
         </div>
         {isOpen ? (
           <div
@@ -49,7 +51,7 @@ function Nav() {
             </ul>
             <ul className="text-center flex flex-col">
               <li className="text-base mb-5">Login</li>
-              <li className="text-base bg-[var(--Cyan)] px-[105px] py-3 rounded-full">
+              <li className="text-base bg-[var(--Cyan)] px-[105px] py-3 rounded-full cursor-pointer hover:bg-[var(--Cyan-hover)]">
                 Sign up
               </li>
             </ul>

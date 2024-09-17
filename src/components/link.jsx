@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function Link({ links }) {
+  //manejo de estados para el boton de copiar
   const [copiedLink, setCopiedLink] = useState(null);
 
   //Funcion para copiar el link acortado
@@ -8,6 +9,7 @@ function Link({ links }) {
     navigator.clipboard
       .writeText(shortenedUrl)
       .then(() => {
+        //pasamos el indice para saber a que boton se le da click
         setCopiedLink(index);
       })
       .catch((err) => {
@@ -23,35 +25,44 @@ function Link({ links }) {
             <div
               key={index}
               className="
+              link-box
               mt-4 py-4
+              md:px-6
               bg-slate-50/10
-              rounded-lg shadow-2xl 
-              flex flex-col"
+              rounded-lg 
+              flex flex-col
+              md:flex-row md:justify-around lg:justify-between"
             >
-              <span className="border-b border-[var(--Gray)]">
-                <p className="px-4 overflow-hidden pb-2 text-[18px]">
-                  {link.originalUrl}
-                </p>
-              </span>
-              <span className="px-4 pt-3">
-                <a
-                  href={link.shortenedUrl}
-                  className="text-[var(--Cyan)] text-[18px]"
-                  target="_blank"
-                >
-                  {link.shortenedUrl}
-                </a>
-              </span>
+              <div className="flex flex-col md:flex-row md:items-center justify-between w-full gap-2 lg:gap-24">
+                <span className="border-b border-[var(--Gray)] md:border-none sm:w-full md:w-[250px] lg:w-[300px]">
+                  <p className="px-4 pb-2 md:p-0 overflow-hidden text-[18px]">
+                    {link.originalUrl}
+                  </p>
+                </span>
+                <span className="">
+                  <a
+                    href={link.shortenedUrl}
+                    className="text-[var(--Cyan)] text-[18px] px-4"
+                    target="_blank"
+                  >
+                    {link.shortenedUrl}
+                  </a>
+                </span>
+              </div>
+
               <button
                 className={`
-                px-4 py-2 mt-4 mx-4 
-                rounded-md 
-                text-white font-bold text-[18px]
-                ${
-                  copiedLink === index
-                    ? "bg-[var(--Dark-Violet)]"
-                    : "bg-[var(--Cyan)]"
-                }`}
+                  px-4 py-2 mt-4 mx-4 
+                  md:m-0 md md:w-28
+                  rounded-md 
+                  text-white font-bold text-[18px]
+                  cursor-pointer hover:bg-[var(--Cyan-hover)]
+                  ${
+                    // clases condicionales segun la variable de estado
+                    copiedLink === index
+                      ? "bg-[var(--Dark-Violet)]"
+                      : "bg-[var(--Cyan)]"
+                  }`}
                 onClick={() => handleCopy(link.shortenedUrl, index)}
               >
                 {copiedLink === index ? "Copied!" : "copy"}

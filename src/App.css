@@ -9,6 +9,8 @@
   --Grayish-Violet: hsl(257, 7%, 63%);
   --Very-Dark-Blue: hsl(255, 11%, 22%);
   --Very-Dark-Violet: hsl(260, 8%, 14%);
+  /* hover-boton */
+  --Cyan-hover: hsl(180, 66%, 70%);
 }
 
 *{
@@ -17,14 +19,73 @@
 }
 
 .boost{
-  background: url(../images/bg-boost-mobile.svg);
+  background: url(../images/bg-boost-mobile.svg) center;
+  background-size: cover;
   min-height: 300px;
 }
 
-@media (min-width: 768px) {
+.input-link{
+  background: url(../../images/bg-shorten-mobile.svg) no-repeat;
+  background-position: right top;
+}
+
+.link-box{
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.10);
+}
+
+.info-box::after{
+  content: "";
+  width: 10px;
+  height: 100px;
+  background-color: var(--Cyan);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.info-box::before{
+  content: "";
+  width: 10px;
+  height: 90px;
+  background-color: var(--Cyan);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+@media (min-width: 640px) {
   .boost{
     background: url(../images/bg-boost-desktop.svg) no-repeat center;
     min-height: 250px;
   }
+  .input-link{
+    background: url(../images/bg-shorten-desktop.svg) no-repeat;
+  }
+}
 
+@media (min-width: 768px) {
+  .info-box::before{
+    content: "";
+    width: 50px;
+    height: 10px;
+    background-color: var(--Cyan);
+    position: absolute;
+    bottom: 50%;
+    left: 100%;
+    transform: translateX(1%);
+  }
+
+  .info-box::after{
+    content: "";
+    width: 45px;
+    height: 10px;
+    background-color: var(--Cyan);
+    position: absolute;
+    top: 47%;
+    left: 0%;
+    transform: translateX(-100%);
+  }
 }

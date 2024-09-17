@@ -20,9 +20,9 @@ function Footer() {
           Features
         </h3>
         <ul>
-          <li className="text-[var(--Gray)] text-sm mt-3">Link shortened</li>
-          <li className="text-[var(--Gray)] text-sm mt-3">Branded Links</li>
-          <li className="text-[var(--Gray)] text-sm mt-3">Analytics</li>
+          <li className="text-[var(--Gray)] text-sm mt-3 cursor-pointer hover:text-[var(--Cyan)]">Link shortened</li>
+          <li className="text-[var(--Gray)] text-sm mt-3 cursor-pointer hover:text-[var(--Cyan)]">Branded Links</li>
+          <li className="text-[var(--Gray)] text-sm mt-3 cursor-pointer hover:text-[var(--Cyan)]">Analytics</li>
         </ul>
       </div>
       <div className="text-center md:text-left">
@@ -30,9 +30,9 @@ function Footer() {
           Resources
         </h3>
         <ul>
-          <li className="text-[var(--Gray)] text-sm mt-3">Blog</li>
-          <li className="text-[var(--Gray)] text-sm mt-3">Developers</li>
-          <li className="text-[var(--Gray)] text-sm mt-3">Support</li>
+          <li className="text-[var(--Gray)] text-sm mt-3 cursor-pointer hover:text-[var(--Cyan)]">Blog</li>
+          <li className="text-[var(--Gray)] text-sm mt-3 cursor-pointer hover:text-[var(--Cyan)]">Developers</li>
+          <li className="text-[var(--Gray)] text-sm mt-3 cursor-pointer hover:text-[var(--Cyan)]">Support</li>
         </ul>
       </div>
       <div className="text-center md:text-left">
@@ -40,10 +40,10 @@ function Footer() {
           Company
         </h3>
         <ul>
-          <li className="text-[var(--Gray)] text-sm mt-3">About</li>
-          <li className="text-[var(--Gray)] text-sm mt-3">Our Team</li>
-          <li className="text-[var(--Gray)] text-sm mt-3">Careers</li>
-          <li className="text-[var(--Gray)] text-sm mt-3">Contact</li>
+          <li className="text-[var(--Gray)] text-sm mt-3 cursor-pointer hover:text-[var(--Cyan)]">About</li>
+          <li className="text-[var(--Gray)] text-sm mt-3 cursor-pointer hover:text-[var(--Cyan)]">Our Team</li>
+          <li className="text-[var(--Gray)] text-sm mt-3 cursor-pointer hover:text-[var(--Cyan)]">Careers</li>
+          <li className="text-[var(--Gray)] text-sm mt-3 cursor-pointer hover:text-[var(--Cyan)]">Contact</li>
         </ul>
       </div>
       <div className="text-center mt-5 md:mt-0">

@@ -4,8 +4,8 @@ import fully from "../../images/icon-fully-customizable.svg";
 
 function Info() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-20">
-      <article className="p-5 bg-white rounded grid justify-items-center">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-10 mt-20">
+      <article className="p-5 bg-white rounded grid justify-items-center md:justify-items-start">
         <img
           src={brand}
           alt="brand"
@@ -18,12 +18,12 @@ function Info() {
         <p className="text-[var(--Very-Dark-Blue)] text-xl font-bold mt-6">
           Bran Recognition
         </p>
-        <p className="text-sm text-[var(--Grayish-Violet)] text-center my-2 leading-6">
+        <p className="text-sm text-[var(--Grayish-Violet)] text-center md:text-start my-2 leading-6">
           Boost your brand recognition with each. Generic links don`t mean a
           thing. Branded links help instil confidence in your content.
         </p>
       </article>
-      <article className="p-5 bg-white rounded grid justify-items-center">
+      <article className="p-5 bg-white rounded grid justify-items-center md:justify-items-start relative md:top-12 info-box ">
         <img
           src={records}
           alt="records"
@@ -36,12 +36,12 @@ function Info() {
         <p className="text-[var(--Very-Dark-Blue)] text-xl font-bold mt-6">
           detailed Records
         </p>
-        <p className="text-sm text-[var(--Grayish-Violet)] text-center my-2 leading-6">
+        <p className="text-sm text-[var(--Grayish-Violet)] text-center md:text-start my-2 leading-6">
           Gain insights into who is clicking your links. knowing when and where
           people engage with your content helps inform betters decisions.
         </p>
       </article>
-      <article className="p-5 bg-white rounded grid justify-items-center">
+      <article className="p-5 bg-white rounded grid justify-items-center md:justify-items-start md:relative top-24">
         <img
           src={fully}
           alt="fully"
@@ -54,7 +54,7 @@ function Info() {
         <p className="text-[var(--Very-Dark-Blue)] text-xl font-bold mt-6">
           Fully Customizable
         </p>
-        <p className="text-sm text-[var(--Grayish-Violet)] text-center my-2 leading-6">
+        <p className="text-sm text-[var(--Grayish-Violet)] text-center md:text-start my-2 leading-6">
           Improve brand awareness and content discoverability through
           customizable links, supercharging audience engagement.
         </p>

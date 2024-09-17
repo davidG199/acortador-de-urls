@@ -6,7 +6,7 @@ function Boost() {
         <p className="text-white font-bold text-2xl">
           Boost your links today
         </p>
-        <button className="mt-4 bg-[var(--Cyan)] px-8 py-3 text-white font-bold rounded-full">
+        <button className="mt-4 bg-[var(--Cyan)] px-8 md:px-10 py-3 text-white font-bold rounded-full cursor-pointer hover:bg-[var(--Cyan-hover)]">
           Get Started
         </button>
       </div>
